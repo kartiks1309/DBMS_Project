@@ -105,12 +105,11 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-<<<<<<< HEAD
                   <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
                               <EmptySpace min="-2" pref="72" max="-2" attributes="0"/>
-                              <Component id="btnRegister" min="-2" pref="180" max="-2" attributes="0"/>
+                              <Component id="jButton1" min="-2" pref="180" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="62" max="-2" attributes="0"/>
@@ -119,26 +118,12 @@
                                   <Component id="jLabel3" alignment="0" min="-2" pref="108" max="-2" attributes="0"/>
                                   <Component id="jLabel4" alignment="0" min="-2" pref="108" max="-2" attributes="0"/>
                                   <Component id="jLabel5" alignment="0" min="-2" pref="108" max="-2" attributes="0"/>
-                                  <Component id="usernametxtField" pref="169" max="32767" attributes="0"/>
-                                  <Component id="emailtxtField" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="PhonetxtField" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="PinpasswordField" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="usernameTxtField" pref="169" max="32767" attributes="0"/>
+                                  <Component id="emailTxtField" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="phoneTxtField" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="pinTxtField" alignment="0" max="32767" attributes="0"/>
                               </Group>
                           </Group>
-=======
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="62" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="jButton1" alignment="0" pref="190" max="32767" attributes="0"/>
-                          <Component id="jLabel2" min="-2" pref="108" max="-2" attributes="0"/>
-                          <Component id="jLabel3" alignment="0" min="-2" pref="108" max="-2" attributes="0"/>
-                          <Component id="jLabel4" alignment="0" min="-2" pref="108" max="-2" attributes="0"/>
-                          <Component id="jLabel5" alignment="0" min="-2" pref="108" max="-2" attributes="0"/>
-                          <Component id="jPasswordField1" alignment="0" max="32767" attributes="0"/>
-                          <Component id="jTextField4" alignment="0" max="32767" attributes="0"/>
-                          <Component id="jTextField2" alignment="0" max="32767" attributes="0"/>
-                          <Component id="jTextField1" alignment="0" max="32767" attributes="0"/>
->>>>>>> 3b302141d7e899f962284e6ea63dee3e3f89866e
                       </Group>
                       <EmptySpace pref="63" max="32767" attributes="0"/>
                   </Group>
@@ -150,33 +135,28 @@
                       <EmptySpace min="-2" pref="88" max="-2" attributes="0"/>
                       <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="usernametxtField" min="-2" max="-2" attributes="0"/>
+                      <Component id="usernameTxtField" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="emailtxtField" min="-2" max="-2" attributes="0"/>
+                      <Component id="emailTxtField" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="PhonetxtField" min="-2" max="-2" attributes="0"/>
+                      <Component id="phoneTxtField" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="PinpasswordField" min="-2" max="-2" attributes="0"/>
+                      <Component id="pinTxtField" min="-2" max="-2" attributes="0"/>
                       <EmptySpace pref="29" max="32767" attributes="0"/>
-<<<<<<< HEAD
-                      <Component id="btnRegister" min="-2" pref="55" max="-2" attributes="0"/>
+                      <Component id="jButton1" min="-2" pref="55" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
-=======
-                      <Component id="jButton1" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
->>>>>>> 3b302141d7e899f962284e6ea63dee3e3f89866e
                   </Group>
               </Group>
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JButton" name="btnRegister">
+            <Component class="javax.swing.JButton" name="jButton1">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="37" green="ce" red="f7" type="rgb"/>
@@ -187,11 +167,7 @@
                 <Property name="text" type="java.lang.String" value="REGISTER"/>
               </Properties>
               <Events>
-<<<<<<< HEAD
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnRegisterActionPerformed"/>
-=======
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
->>>>>>> 3b302141d7e899f962284e6ea63dee3e3f89866e
               </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel2">
@@ -202,9 +178,9 @@
                 <Property name="text" type="java.lang.String" value="Email"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="usernametxtField">
+            <Component class="javax.swing.JTextField" name="usernameTxtField">
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="usernametxtFieldActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="usernameTxtFieldActionPerformed"/>
               </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel3">
@@ -215,14 +191,14 @@
                 <Property name="text" type="java.lang.String" value="Username"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="emailtxtField">
+            <Component class="javax.swing.JTextField" name="emailTxtField">
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="emailtxtFieldActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="emailTxtFieldActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JTextField" name="PhonetxtField">
+            <Component class="javax.swing.JTextField" name="phoneTxtField">
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="PhonetxtFieldActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="phoneTxtFieldActionPerformed"/>
               </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel4">
@@ -241,9 +217,9 @@
                 <Property name="text" type="java.lang.String" value="Pin"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JPasswordField" name="PinpasswordField">
+            <Component class="javax.swing.JPasswordField" name="pinTxtField">
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="PinpasswordFieldActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="pinTxtFieldActionPerformed"/>
               </Events>
             </Component>
           </SubComponents>

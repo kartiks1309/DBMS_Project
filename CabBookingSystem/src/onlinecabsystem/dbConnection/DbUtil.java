@@ -19,7 +19,7 @@ public class DbUtil {
 	String driverClassName = "com.mysql.cj.jdbc.Driver";
 	String connectionUrl = "jdbc:mysql://localhost:3306/cabs_db";
 	String dbUser = "root";
-	String dbPwd = "_ksmysql_";
+	String dbPwd = "iiit127_kk";
 
 	private static DbUtil dbUtil = null;
 

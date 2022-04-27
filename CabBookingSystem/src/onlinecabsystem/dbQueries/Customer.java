@@ -23,7 +23,7 @@ public class Customer {
     public void addCustomer(String currUserName, String currEmail, String currPhone, String currPin ) {
 		
         try {
-            String queryString = "INSERT INTO customers(Username,Email,Phone,Pin) VALUES(?,?, ?, ?)";
+            String queryString = "INSERT INTO customer(Username,Email,Phone,Pin) VALUES(?,?, ?, ?)";
             connection = getConnection();
             ptmt = connection.prepareStatement(queryString);
             ptmt.setString(1, currUserName);
@@ -47,7 +47,7 @@ public class Customer {
     }
     public void loginUser(String email, String pin){
         try {
-            String queryString = "select * from customers where Email=? and Pin=?";
+            String queryString = "select * from customer where Email=? and Pin=?";
             connection = getConnection();
             ptmt = connection.prepareStatement(queryString);
             ptmt.setString(1, email);

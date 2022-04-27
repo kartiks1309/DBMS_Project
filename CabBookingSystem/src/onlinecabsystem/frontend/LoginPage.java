@@ -49,6 +49,12 @@ public class LoginPage extends javax.swing.JFrame {
 
         jLabel2.setText("Pin");
 
+        jPasswordField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jPasswordField1ActionPerformed(evt);
+            }
+        });
+
         jButton1.setText("Login");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -188,6 +194,10 @@ public class LoginPage extends javax.swing.JFrame {
         Admin ob = new Admin();
         ob.loginAdmin(jTextField2.getText(), jPasswordField2.getText());
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jPasswordField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jPasswordField1ActionPerformed
 
     /**
      * @param args the command line arguments

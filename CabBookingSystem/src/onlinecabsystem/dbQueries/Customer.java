@@ -8,13 +8,13 @@ import java.sql.SQLException;
 
 import onlinecabsystem.dbConnection.DbUtil;
 
-public class CustomerDaoImpl implements CustomerDao{
+public class Customer {
 	
 	Connection connection = null;
 	PreparedStatement ptmt = null;
 	ResultSet resultSet = null;
 	
-	public CustomerDaoImpl() {};
+	public Customer() {};
 	
 	private Connection getConnection() throws SQLException {
 		Connection conn;

@@ -6,7 +6,7 @@
 package onlinecabsystem;
 import java.sql.DriverManager;
 import onlinecabsystem.dbQueries.CustomerDao;
-import onlinecabsystem.dbQueries.CustomerDaoImpl;
+import onlinecabsystem.dbQueries.Customer;
 import onlinecabsystem.dbConnection.DbUtil;
 import java.sql.Connection;
 /**

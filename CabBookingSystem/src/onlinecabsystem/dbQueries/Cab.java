@@ -34,13 +34,13 @@ public class Cab{
 		return conn;
 	}
 	
-	public void addCab(int currCabid, String currDrivername, String currDriverphone, String currCity, boolean currAvail) {
+	public void addCab(String currCabid, String currDrivername, String currDriverphone, String currCity, boolean currAvail) {
 		
 		try {
 			String queryString = "INSERT INTO cablist( Cabid, Drivername, Driverphone, City, Avail) VALUES(?,?,?,?,?)";
 			connection = getConnection();
 			ptmt = connection.prepareStatement(queryString);
-                        ptmt.setInt(1, currCabid);
+                        ptmt.setString(1, currCabid);
 			ptmt.setString(2, currDrivername);
 			ptmt.setString(3, currDriverphone);
 			ptmt.setString(4, currCity);

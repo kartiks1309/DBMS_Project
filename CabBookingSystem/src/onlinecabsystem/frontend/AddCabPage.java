@@ -3,7 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package onlinecabsystem.frontend;
-
+import onlinecabsystem.dbQueries.Cab;
 /**
  *
  * @author SRISHTI
@@ -34,13 +34,13 @@ public class AddCabPage extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
-        usernameTxtField = new javax.swing.JTextField();
+        cabnumTxtField = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
-        emailTxtField = new javax.swing.JTextField();
+        drivernameTxtField = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
-        phoneTxtField1 = new javax.swing.JTextField();
+        driverphoneTxtField = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
-        phoneTxtField2 = new javax.swing.JTextField();
+        cityTxtField = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -71,36 +71,36 @@ public class AddCabPage extends javax.swing.JFrame {
         jLabel5.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel5.setText("Cab Number");
 
-        usernameTxtField.addActionListener(new java.awt.event.ActionListener() {
+        cabnumTxtField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                usernameTxtFieldActionPerformed(evt);
+                cabnumTxtFieldActionPerformed(evt);
             }
         });
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel6.setText("Driver Name");
 
-        emailTxtField.addActionListener(new java.awt.event.ActionListener() {
+        drivernameTxtField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                emailTxtFieldActionPerformed(evt);
+                drivernameTxtFieldActionPerformed(evt);
             }
         });
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel7.setText("Driver Phone Number");
 
-        phoneTxtField1.addActionListener(new java.awt.event.ActionListener() {
+        driverphoneTxtField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                phoneTxtField1ActionPerformed(evt);
+                driverphoneTxtFieldActionPerformed(evt);
             }
         });
 
         jLabel8.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel8.setText("City");
 
-        phoneTxtField2.addActionListener(new java.awt.event.ActionListener() {
+        cityTxtField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                phoneTxtField2ActionPerformed(evt);
+                cityTxtFieldActionPerformed(evt);
             }
         });
 
@@ -111,13 +111,13 @@ public class AddCabPage extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(70, 70, 70)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(phoneTxtField2, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cityTxtField, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(phoneTxtField1, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(driverphoneTxtField, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(usernameTxtField, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(emailTxtField, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cabnumTxtField, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(drivernameTxtField, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(63, Short.MAX_VALUE))
         );
@@ -127,25 +127,30 @@ public class AddCabPage extends javax.swing.JFrame {
                 .addGap(47, 47, 47)
                 .addComponent(jLabel5)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(usernameTxtField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(cabnumTxtField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel6)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(emailTxtField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(drivernameTxtField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel7)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(phoneTxtField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(driverphoneTxtField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel8)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(phoneTxtField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(cityTxtField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(78, Short.MAX_VALUE))
         );
 
         jButton1.setBackground(new java.awt.Color(247, 206, 55));
         jButton1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jButton1.setText("ADD");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -191,25 +196,32 @@ public class AddCabPage extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void usernameTxtFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_usernameTxtFieldActionPerformed
+    private void cabnumTxtFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cabnumTxtFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_usernameTxtFieldActionPerformed
+    }//GEN-LAST:event_cabnumTxtFieldActionPerformed
 
-    private void emailTxtFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emailTxtFieldActionPerformed
+    private void drivernameTxtFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_drivernameTxtFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_emailTxtFieldActionPerformed
+    }//GEN-LAST:event_drivernameTxtFieldActionPerformed
 
     private void phoneTxtFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_phoneTxtFieldActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_phoneTxtFieldActionPerformed
 
-    private void phoneTxtField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_phoneTxtField1ActionPerformed
+    private void driverphoneTxtFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_driverphoneTxtFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_phoneTxtField1ActionPerformed
+    }//GEN-LAST:event_driverphoneTxtFieldActionPerformed
 
-    private void phoneTxtField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_phoneTxtField2ActionPerformed
+    private void cityTxtFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cityTxtFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_phoneTxtField2ActionPerformed
+    }//GEN-LAST:event_cityTxtFieldActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        Cab obj=new Cab();
+        
+        obj.addCab(cabnumTxtField.getText(),drivernameTxtField.getText(), driverphoneTxtField.getText(),cityTxtField.getText(),true);
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -247,7 +259,10 @@ public class AddCabPage extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField emailTxtField;
+    private javax.swing.JTextField cabnumTxtField;
+    private javax.swing.JTextField cityTxtField;
+    private javax.swing.JTextField drivernameTxtField;
+    private javax.swing.JTextField driverphoneTxtField;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -260,8 +275,5 @@ public class AddCabPage extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JTextField phoneTxtField;
-    private javax.swing.JTextField phoneTxtField1;
-    private javax.swing.JTextField phoneTxtField2;
-    private javax.swing.JTextField usernameTxtField;
     // End of variables declaration//GEN-END:variables
 }

@@ -133,13 +133,13 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="70" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="phoneTxtField2" min="-2" pref="165" max="-2" attributes="0"/>
+                          <Component id="cityTxtField" min="-2" pref="165" max="-2" attributes="0"/>
                           <Component id="jLabel8" min="-2" pref="148" max="-2" attributes="0"/>
-                          <Component id="phoneTxtField1" min="-2" pref="165" max="-2" attributes="0"/>
+                          <Component id="driverphoneTxtField" min="-2" pref="165" max="-2" attributes="0"/>
                           <Component id="jLabel5" alignment="0" min="-2" pref="108" max="-2" attributes="0"/>
                           <Component id="jLabel6" min="-2" pref="108" max="-2" attributes="0"/>
-                          <Component id="usernameTxtField" min="-2" pref="165" max="-2" attributes="0"/>
-                          <Component id="emailTxtField" alignment="0" min="-2" pref="165" max="-2" attributes="0"/>
+                          <Component id="cabnumTxtField" min="-2" pref="165" max="-2" attributes="0"/>
+                          <Component id="drivernameTxtField" alignment="0" min="-2" pref="165" max="-2" attributes="0"/>
                           <Component id="jLabel7" alignment="0" min="-2" pref="148" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace pref="63" max="32767" attributes="0"/>
@@ -152,19 +152,19 @@
                       <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
                       <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="usernameTxtField" min="-2" max="-2" attributes="0"/>
+                      <Component id="cabnumTxtField" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="emailTxtField" min="-2" max="-2" attributes="0"/>
+                      <Component id="drivernameTxtField" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="phoneTxtField1" min="-2" max="-2" attributes="0"/>
+                      <Component id="driverphoneTxtField" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jLabel8" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="phoneTxtField2" min="-2" max="-2" attributes="0"/>
+                      <Component id="cityTxtField" min="-2" max="-2" attributes="0"/>
                       <EmptySpace pref="78" max="32767" attributes="0"/>
                   </Group>
               </Group>
@@ -179,9 +179,9 @@
                 <Property name="text" type="java.lang.String" value="Cab Number"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="usernameTxtField">
+            <Component class="javax.swing.JTextField" name="cabnumTxtField">
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="usernameTxtFieldActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cabnumTxtFieldActionPerformed"/>
               </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel6">
@@ -192,9 +192,9 @@
                 <Property name="text" type="java.lang.String" value="Driver Name"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="emailTxtField">
+            <Component class="javax.swing.JTextField" name="drivernameTxtField">
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="emailTxtFieldActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="drivernameTxtFieldActionPerformed"/>
               </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel7">
@@ -205,9 +205,9 @@
                 <Property name="text" type="java.lang.String" value="Driver Phone Number"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="phoneTxtField1">
+            <Component class="javax.swing.JTextField" name="driverphoneTxtField">
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="phoneTxtField1ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="driverphoneTxtFieldActionPerformed"/>
               </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel8">
@@ -218,9 +218,9 @@
                 <Property name="text" type="java.lang.String" value="City"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="phoneTxtField2">
+            <Component class="javax.swing.JTextField" name="cityTxtField">
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="phoneTxtField2ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cityTxtFieldActionPerformed"/>
               </Events>
             </Component>
           </SubComponents>
@@ -235,6 +235,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="ADD"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>

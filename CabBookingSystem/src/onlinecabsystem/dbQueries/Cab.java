@@ -34,16 +34,17 @@ public class Cab{
 		return conn;
 	}
 	
-	public void addCab(String currDrivername, String currDriverphone, String currCity, boolean currAvail) {
+	public void addCab(int currCabid, String currDrivername, String currDriverphone, String currCity, boolean currAvail) {
 		
 		try {
-			String queryString = "INSERT INTO cablist( Drivername, Driverphone, City, Avail) VALUES(?,?,?,?)";
+			String queryString = "INSERT INTO cablist( Cabid, Drivername, Driverphone, City, Avail) VALUES(?,?,?,?,?)";
 			connection = getConnection();
 			ptmt = connection.prepareStatement(queryString);
-			ptmt.setString(1, currDrivername);
-			ptmt.setString(2, currDriverphone);
-			ptmt.setString(3, currCity);
-                        ptmt.setBoolean(4, currAvail);
+                        ptmt.setInt(1, currCabid);
+			ptmt.setString(2, currDrivername);
+			ptmt.setString(3, currDriverphone);
+			ptmt.setString(4, currCity);
+                        ptmt.setBoolean(5, currAvail);
 			ptmt.executeUpdate();
 			System.out.println("Cab Added Successfully");
 		} catch (SQLException e) {

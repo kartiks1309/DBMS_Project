@@ -183,16 +183,22 @@ public class LoginPage extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+      
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         Customer ob = new Customer();
         ob.loginUser(jTextField1.getText(), jPasswordField1.getText());
     }//GEN-LAST:event_jButton1ActionPerformed
 
+     public String var_id;
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
         Admin ob = new Admin();
+        var_id=jTextField2.getText();
         ob.loginAdmin(jTextField2.getText(), jPasswordField2.getText());
+        setVisible(false);
+            AdminHomepage ob1=new AdminHomepage(var_id);
+            ob1.setVisible(true);
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jPasswordField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordField1ActionPerformed

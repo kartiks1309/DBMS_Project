@@ -49,4 +49,63 @@ public class Admin {
             }
 	}
     }	
+    
+    
+    public void UpdatePassword(String id,String pin,String cpin)
+    {
+         
+        
+          try{
+              String sql="select* from admins where Id=?";
+               connection = getConnection();
+//              conn=getConnection();
+            ptmt=connection.prepareStatement(sql);
+            
+            ptmt.setString(1, id);
+            resultSet=ptmt.executeQuery();
+            
+            if (resultSet.next()){
+                
+                String v1=id;
+                String v2=pin;
+                String v3=cpin;
+                
+                if (v3.equals(v2)){
+                    sql="update admins set Pin='"+v3+"' where Id='"+v1+"'";
+                    ptmt=connection.prepareStatement(sql);
+                    ptmt.execute();
+                    
+                    JOptionPane.showMessageDialog(null, "Pin changed successfully!");
+                    
+                    
+//                    NewPintxtField.setText("");
+//                    ConfirmPintxtField.setText("");
+                    
+                }
+                else{
+                    JOptionPane.showMessageDialog(null, "Both Passwords don't match!");
+//                    NewPintxtField.setText("");
+//                    ConfirmPintxtField.setText("");
+                }
+             
+                
+            }
+            else{
+                JOptionPane.showMessageDialog(null, "Incorrect Credential!");
+            }
+                
+            
+            
+        }catch(Exception e){
+            JOptionPane.showMessageDialog(null,e);
+        }finally{
+            try{
+                resultSet.close();
+                ptmt.close();
+            }catch(Exception e){
+            
+            }
+        }
+        
+    }
 }

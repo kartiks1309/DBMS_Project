@@ -220,7 +220,7 @@ public class AddCabPage extends javax.swing.JFrame {
         // TODO add your handling code here:
         Cab obj=new Cab();
         
-        obj.addCab(cabnumTxtField.getText(),drivernameTxtField.getText(), driverphoneTxtField.getText(),cityTxtField.getText(),true);
+        obj.addCab(cabnumTxtField.getText(),drivernameTxtField.getText(), driverphoneTxtField.getText(),cityTxtField.getText(),1);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**

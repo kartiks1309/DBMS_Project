@@ -19,6 +19,7 @@ import java.util.*;
 import javax.swing.*;
 
 
+
 import onlinecabsystem.dbConnection.DbUtil;
 
 public class Cab{
@@ -104,7 +105,10 @@ public class Cab{
 		}
 		
 	}
-        public Vector<String> viewCab(String cabid){
+
+                
+            public Vector<String> viewCab(String cabid){
+
             Vector<String> vec = new Vector<String>();
             String sql = "select * from cablist where Cabid=?";
             try{

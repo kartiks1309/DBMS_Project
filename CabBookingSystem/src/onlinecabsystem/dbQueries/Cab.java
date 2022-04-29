@@ -110,6 +110,83 @@ public class Cab{
 		}
 		
 	}
+        public void updateDriverPhoNum(String cabId,String toChange) {
+			
+		try {
+			String queryString = "update cablist set Driverphone = ? where cabId=?";
+			connection = getConnection();
+			ptmt = connection.prepareStatement(queryString);
+
+			ptmt.setString(1, toChange);
+			ptmt.setString(2, cabId);
+			
+			int rowsUpdated = ptmt.executeUpdate();
+			if (rowsUpdated > 0) {
+                            JOptionPane.showMessageDialog(null,"Cab Driver Name has been updated successfully!");
+			}
+                        else{
+                            JOptionPane.showMessageDialog(null,"Wrong Cab Id !");
+                        }
+			
+	
+			
+		} catch (SQLException e) {
+                        JOptionPane.showMessageDialog(null,"Oops! Database issue.");
+			e.printStackTrace();
+		} finally {
+			try {
+				if (ptmt != null)
+					ptmt.close();
+				if (connection != null)
+					connection.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+
+		}
+		
+	}
+
+        public void updateCabCity(String cabId,String toChange) {
+			
+		try {
+			String queryString = "update cablist set City = ? where cabId=?";
+			connection = getConnection();
+			ptmt = connection.prepareStatement(queryString);
+
+			ptmt.setString(1, toChange);
+			ptmt.setString(2, cabId);
+			
+			int rowsUpdated = ptmt.executeUpdate();
+			if (rowsUpdated > 0) {
+                            JOptionPane.showMessageDialog(null,"Cab City has been updated successfully!");
+			}
+                        else{
+                            JOptionPane.showMessageDialog(null,"Wrong Cab Id !");
+                        }
+			
+	
+			
+		} catch (SQLException e) {
+                        JOptionPane.showMessageDialog(null,"Oops! Database issue.");
+			e.printStackTrace();
+		} finally {
+			try {
+				if (ptmt != null)
+					ptmt.close();
+				if (connection != null)
+					connection.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+
+		}
+		
+	}
 
                 
             public Vector<String> viewCab(String cabid){

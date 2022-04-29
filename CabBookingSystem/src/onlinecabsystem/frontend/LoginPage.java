@@ -211,11 +211,15 @@ public class LoginPage extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-      
+      String emailid;
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         Customer ob = new Customer();
+        emailid=jTextField1.getText();
         ob.loginUser(jTextField1.getText(), jPasswordField1.getText());
+        UserHomepage obje=new UserHomepage(emailid);
+        setVisible(false);
+        obje.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
      public String var_id;

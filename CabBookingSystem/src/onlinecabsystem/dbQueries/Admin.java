@@ -37,6 +37,7 @@ public class Admin {
             }
             
 	} catch (SQLException e) {
+            JOptionPane.showMessageDialog(null,"Oops! Database issue.");
             e.printStackTrace();
 	} finally {
             try {
@@ -97,7 +98,7 @@ public class Admin {
             
             
         }catch(Exception e){
-            JOptionPane.showMessageDialog(null,e);
+            JOptionPane.showMessageDialog(null,"Oops! Database issue.");
         }finally{
             try{
                 resultSet.close();

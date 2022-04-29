@@ -211,14 +211,12 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace pref="60" max="32767" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
                           <Component id="jLabel10" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabel6" min="-2" pref="49" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="jButton2" alignment="0" pref="188" max="32767" attributes="0"/>
-                              <Component id="availTxtField" alignment="0" max="32767" attributes="0"/>
-                              <Component id="cabidTxtField" alignment="0" max="32767" attributes="0"/>
-                          </Group>
+                          <Component id="jButton2" alignment="0" pref="188" max="32767" attributes="0"/>
+                          <Component id="cabidTxtField" alignment="0" max="32767" attributes="0"/>
+                          <Component id="availTxtField" alignment="0" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="102" max="-2" attributes="0"/>
                   </Group>
@@ -233,9 +231,9 @@
                       <Component id="cabidTxtField" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
                       <Component id="jLabel10" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="availTxtField" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
                       <Component id="jButton2" min="-2" pref="45" max="-2" attributes="0"/>
                       <EmptySpace pref="120" max="32767" attributes="0"/>
                   </Group>
@@ -258,14 +256,6 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cabidTxtFieldActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JTextField" name="availTxtField">
-              <Properties>
-                <Property name="editable" type="boolean" value="false"/>
-                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                </Property>
-              </Properties>
-            </Component>
             <Component class="javax.swing.JButton" name="jButton2">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
@@ -273,6 +263,14 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="SET AVAILABILITY"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton2ActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JTextField" name="availTxtField">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="availTxtFieldActionPerformed"/>
+              </Events>
             </Component>
           </SubComponents>
         </Container>

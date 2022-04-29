@@ -31,8 +31,10 @@ public class Customer {
             ptmt.setString(3, currPhone);
             ptmt.setString(4, currPin);
             ptmt.executeUpdate();
-            System.out.println("Data Added Successfully");
+             JOptionPane.showMessageDialog(null,"User Added Successfully.");
+           
 	} catch (SQLException e) {
+             JOptionPane.showMessageDialog(null,"Oops! Database issue.");
             e.printStackTrace();
 	} finally {
             try {
@@ -61,6 +63,7 @@ public class Customer {
             }
             
 	} catch (SQLException e) {
+            JOptionPane.showMessageDialog(null,"Oops! Database issue.");
             e.printStackTrace();
 	} finally {
             try {

@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package onlinecabsystem.frontend;
-
+import onlinecabsystem.dbQueries.Cab;
 /**
  *
  * @author Devil
@@ -44,8 +44,8 @@ public class UpdateCab extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         cabidTxtField = new javax.swing.JTextField();
-        availTxtField = new javax.swing.JTextField();
         jButton2 = new javax.swing.JButton();
+        availTxtField = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
 
         jLabel1.setText("Cab ID");
@@ -128,6 +128,7 @@ public class UpdateCab extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel1.setPreferredSize(new java.awt.Dimension(380, 580));
 
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -141,11 +142,19 @@ public class UpdateCab extends javax.swing.JFrame {
             }
         });
 
-        availTxtField.setEditable(false);
-        availTxtField.setBackground(new java.awt.Color(255, 255, 255));
-
         jButton2.setBackground(new java.awt.Color(247, 206, 55));
         jButton2.setText("SET AVAILABILITY");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+
+        availTxtField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                availTxtFieldActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -153,13 +162,12 @@ public class UpdateCab extends javax.swing.JFrame {
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
                 .addContainerGap(60, Short.MAX_VALUE)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jLabel10)
                     .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, 188, Short.MAX_VALUE)
-                        .addComponent(availTxtField)
-                        .addComponent(cabidTxtField)))
+                    .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, 188, Short.MAX_VALUE)
+                    .addComponent(cabidTxtField)
+                    .addComponent(availTxtField))
                 .addGap(102, 102, 102))
         );
         jPanel3Layout.setVerticalGroup(
@@ -171,9 +179,9 @@ public class UpdateCab extends javax.swing.JFrame {
                 .addComponent(cabidTxtField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(25, 25, 25)
                 .addComponent(jLabel10)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(18, 18, 18)
                 .addComponent(availTxtField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(46, 46, 46)
+                .addGap(39, 39, 39)
                 .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(120, Short.MAX_VALUE))
         );
@@ -196,7 +204,7 @@ public class UpdateCab extends javax.swing.JFrame {
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(22, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -207,7 +215,7 @@ public class UpdateCab extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 421, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -228,6 +236,16 @@ public class UpdateCab extends javax.swing.JFrame {
     private void cabidTxtFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cabidTxtFieldActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_cabidTxtFieldActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        Cab obj=new Cab();
+        obj.changeCabStatus(cabidTxtField.getText(),Integer.parseInt(availTxtField.getText()));
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void availTxtFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_availTxtFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_availTxtFieldActionPerformed
 
     /**
      * @param args the command line arguments

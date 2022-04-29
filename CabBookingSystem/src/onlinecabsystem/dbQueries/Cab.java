@@ -51,6 +51,7 @@ public class Cab{
 			ptmt.executeUpdate();
 			JOptionPane.showMessageDialog(null,"Cab Added Successfully");
 		} catch (SQLException e) {
+                         JOptionPane.showMessageDialog(null,"Oops! Database issue.");
 			e.printStackTrace();
 		} finally {
 			try {
@@ -70,7 +71,7 @@ public class Cab{
 	
 		
 		
-		public void changeCabStatus(int cabId,boolean toChange) {
+		public void changeCabStatus(String cabId,int toChange) {
 			
 		
 		try {
@@ -78,17 +79,21 @@ public class Cab{
 			connection = getConnection();
 			ptmt = connection.prepareStatement(queryString);
 
-			ptmt.setBoolean(1, toChange);
-			ptmt.setInt(2, cabId);
+			ptmt.setInt(1, toChange);
+			ptmt.setString(2, cabId);
 			
 			int rowsUpdated = ptmt.executeUpdate();
 			if (rowsUpdated > 0) {
-			    System.out.println("An existing cab status has been updated successfully!");
+                            JOptionPane.showMessageDialog(null,"Cab status has been updated successfully!");
 			}
+                        else{
+                            JOptionPane.showMessageDialog(null,"Wrong Cab Id !");
+                        }
 			
 	
 			
 		} catch (SQLException e) {
+                        JOptionPane.showMessageDialog(null,"Oops! Database issue.");
 			e.printStackTrace();
 		} finally {
 			try {
@@ -126,6 +131,7 @@ public class Cab{
                     return vec;
                 }
             }catch(SQLException e){
+                JOptionPane.showMessageDialog(null,"Oops! Database issue.");
                 JOptionPane.showMessageDialog(null, "Incorrect ID");
             }finally{
                 try{

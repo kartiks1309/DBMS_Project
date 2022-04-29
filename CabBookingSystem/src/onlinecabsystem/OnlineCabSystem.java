@@ -20,12 +20,12 @@ public class OnlineCabSystem {
     public static void main(String[] args) {
         // TODO code application logic here
         System.out.println("System running!");
-//        try{
-//            Connection conn;
-//        conn = DbUtil.getInstance().getConnection();
-//        }catch(Exception e){
-//            System.out.println(e);
-//        }
+        try{
+            Connection conn;
+        conn = DbUtil.getInstance().getConnection();
+        }catch(Exception e){
+            System.out.println(e);
+        }
                	
     }
     

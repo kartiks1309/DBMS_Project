@@ -188,7 +188,41 @@ public class Cab{
 		
 	}
 
-                
+         public void deleteCab(String cabId) {
+			
+		try {
+			String queryString = "DELETE FROM cablist where cabId=?";
+			connection = getConnection();
+			ptmt = connection.prepareStatement(queryString);
+
+			ptmt.setString(1, cabId);
+			
+			int rowsAffected = ptmt.executeUpdate();
+			if (rowsAffected > 0) {
+                            JOptionPane.showMessageDialog(null,"Cab successfully deleted!");
+			}
+                        else{
+                            JOptionPane.showMessageDialog(null,"Wrong Cab Id !");
+                        }
+					
+		} catch (SQLException e) {
+                        JOptionPane.showMessageDialog(null,"Oops! Database issue.");
+			e.printStackTrace();
+		} finally {
+			try {
+				if (ptmt != null)
+					ptmt.close();
+				if (connection != null)
+					connection.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+
+		}
+		
+	}     
             public Vector<String> viewCab(String cabid){
 
             Vector<String> vec = new Vector<String>();
@@ -216,7 +250,7 @@ public class Cab{
                     ptmt.close();
                     connection.close();
                 }catch(SQLException e){
-                    
+                    e.printStackTrace();
                 }
             }
             return vec;

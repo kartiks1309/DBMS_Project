@@ -15,6 +15,9 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.*;
+import javax.swing.*;
+
 
 
 import onlinecabsystem.dbConnection.DbUtil;
@@ -102,6 +105,37 @@ public class Cab{
 		}
 		
 	}
+                
+            public Vector<String> viewCab(String cabid){
+            Vector<String> vec = new Vector<String>();
+            String sql = "select * from cablist where Cabid=?";
+            try{
+                
+                connection = getConnection();
+		ptmt = connection.prepareStatement(sql);
+                ptmt.setString(1, cabid);
+                resultSet = ptmt.executeQuery();
+                if (resultSet.next()){
+                    
+                    vec.add(resultSet.getString("Drivername"));
+                    vec.add(resultSet.getString("Driverphone"));
+                    vec.add(resultSet.getString("City"));
+                    vec.add(resultSet.getString("Avail"));
+                    return vec;
+                }
+            }catch(SQLException e){
+                JOptionPane.showMessageDialog(null, "Incorrect ID");
+            }finally{
+                try{
+                    resultSet.close();
+                    ptmt.close();
+                    connection.close();
+                }catch(SQLException e){
+                    
+                }
+            }
+            return vec;
+        }
 
 
 	

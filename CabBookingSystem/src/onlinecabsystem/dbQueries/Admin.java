@@ -21,7 +21,7 @@ public class Admin {
     }
 	
    
-    public void loginAdmin(String id, String pin){
+    public boolean loginAdmin(String id, String pin){
         try {
             String queryString = "select * from admins where Id=? and Pin=?";
             connection = getConnection();
@@ -31,9 +31,11 @@ public class Admin {
             resultSet = ptmt.executeQuery();
             if (resultSet.next()){
                 JOptionPane.showMessageDialog(null, "Login success!");
+                return true;
             }
             else{
                 JOptionPane.showMessageDialog(null, "Incorrect Credentials!");
+                return false;
             }
             
 	} catch (SQLException e) {
@@ -49,6 +51,8 @@ public class Admin {
 		e.printStackTrace();
             }
 	}
+        
+        return false;
     }	
     
     

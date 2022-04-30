@@ -221,10 +221,12 @@ public class LoginPage extends javax.swing.JFrame {
         // TODO add your handling code here:
         Customer ob = new Customer();
         emailid=jTextField1.getText();
-        ob.loginUser(jTextField1.getText(), jPasswordField1.getText());
-        UserHomepage obje=new UserHomepage(emailid);
-        setVisible(false);
-        obje.setVisible(true);
+        boolean ifSuccess=ob.loginUser(jTextField1.getText(), jPasswordField1.getText());
+        if(ifSuccess){
+            UserHomepage obje=new UserHomepage(emailid);
+            setVisible(false);
+            obje.setVisible(true);
+        }
     }//GEN-LAST:event_jButton1ActionPerformed
 
      public String var_id;
@@ -232,10 +234,12 @@ public class LoginPage extends javax.swing.JFrame {
         // TODO add your handling code here:
         Admin ob = new Admin();
         var_id=jTextField2.getText();
-        ob.loginAdmin(jTextField2.getText(), jPasswordField2.getText());
-        setVisible(false);
+        boolean ifSuccess=ob.loginAdmin(jTextField2.getText(), jPasswordField2.getText());
+        if(ifSuccess){
+            setVisible(false);
             AdminHomepage ob1=new AdminHomepage(var_id);
             ob1.setVisible(true);
+        }
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jPasswordField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordField1ActionPerformed

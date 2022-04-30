@@ -48,7 +48,7 @@ public class Customer {
             }
 	}
     }
-    public void loginUser(String email, String pin){
+    public boolean loginUser(String email, String pin){
         try {
             String queryString = "select * from customer where Email=? and Pin=?";
             connection = getConnection();
@@ -58,9 +58,11 @@ public class Customer {
             resultSet = ptmt.executeQuery();
             if (resultSet.next()){
                 JOptionPane.showMessageDialog(null, "Login success!");
+                return true;
             }
             else{
                 JOptionPane.showMessageDialog(null, "Incorrect Credentials!");
+                return false;
             }
             
 	} catch (SQLException e) {
@@ -76,6 +78,7 @@ public class Customer {
 		e.printStackTrace();
             }
 	}
+        return false;
     }	
     
     public void UpdatePassword(String Email,String newpin,String cpin)

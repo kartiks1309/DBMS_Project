@@ -20,7 +20,7 @@ public class DbUtil {
 	String connectionUrl = "jdbc:mysql://localhost:3306/cabs_db";
 	String dbUser = "root";
 
-	String dbPwd = "_ksmysql_";
+	String dbPwd = "Pratyush@7";
 
 	
 

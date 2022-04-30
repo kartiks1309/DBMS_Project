@@ -25,9 +25,9 @@ PreparedStatement pst;
     private String loggedInUserEmailId;
     public UserHomepage(String emailid) {
         initComponents();
-        loggedInUserEmailId=emailid;
+        loggedInUserEmailId = emailid;
         Customer cust= new Customer();
-        Vector<String>v= cust.ViewUserProfile(loggedInUserEmailId);
+        Vector<String>v = cust.ViewUserProfile(loggedInUserEmailId);
         if(v.size()==3)
         {
             UsernametxtField.setText(v.get(0));
@@ -405,7 +405,7 @@ PreparedStatement pst;
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         
-        PreviousBookings pb= new PreviousBookings();
+        PreviousBookings pb = new PreviousBookings(loggedInUserEmailId);
         setVisible(false);
         pb.setVisible(true);
     }//GEN-LAST:event_jButton3ActionPerformed

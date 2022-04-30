@@ -1,6 +1,7 @@
 package onlinecabsystem.dbQueries;
 
 import java.sql.*;
+import java.util.Vector;
 import javax.swing.*;
 
 
@@ -128,5 +129,50 @@ public class Customer {
                 JOptionPane.showMessageDialog(null, "Oops Database issue!");
             }
         }
+    }
+    
+    public Vector<String> ViewUserProfile(String Email)
+    {
+        Vector<String> vec = new Vector<String>();
+        try{
+             
+             String sql="select * from customer where Email=?";
+             connection = getConnection();
+            ptmt=connection.prepareStatement(sql);
+            ptmt.setString(1,Email);
+            resultSet=ptmt.executeQuery();
+            
+            if (resultSet.next()){
+                
+                String v1=Email;
+                String v2=resultSet.getString("Username");
+                String v3=resultSet.getString("Phone");
+                vec.add(v2);
+                vec.add(v1);
+                vec.add(v3);
+                return vec;
+                
+                
+             
+                
+            }
+            else{
+                JOptionPane.showMessageDialog(null, "Oops Database issue!");
+            }
+                
+            
+            
+        }catch(Exception e){
+           JOptionPane.showMessageDialog(null,"Oops! Database issue.");
+        }finally{
+            try{
+                resultSet.close();
+                ptmt.close();
+            }catch(Exception e){
+              
+                JOptionPane.showMessageDialog(null, "Oops Database issue!");
+            }
+        }
+        return vec;
     }
 }

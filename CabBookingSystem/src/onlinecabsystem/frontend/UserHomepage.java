@@ -4,6 +4,7 @@
  */
 package onlinecabsystem.frontend;
 import java.sql.*;
+import java.util.Vector;
 
 import javax.swing.JOptionPane;
 import onlinecabsystem.dbQueries.Customer;
@@ -25,6 +26,23 @@ PreparedStatement pst;
     public UserHomepage(String emailid) {
         initComponents();
         loggedInUserEmailId=emailid;
+        Customer cust= new Customer();
+        Vector<String>v= cust.ViewUserProfile(loggedInUserEmailId);
+        if(v.size()==3)
+        {
+            UsernametxtField.setText(v.get(0));
+            EmailtxtField.setText(v.get(1));
+            PhonetxtField.setText(v.get(2));
+            
+            
+        }
+        else
+        {
+                        System.out.println("There is some Problem");
+                         UsernametxtField.setText("");
+                         EmailtxtField.setText("");
+                         PhonetxtField.setText("");
+        }
     }
 
     /**
@@ -53,9 +71,9 @@ PreparedStatement pst;
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        jTextField3 = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
-        jTextField5 = new javax.swing.JTextField();
+        UsernametxtField = new javax.swing.JTextField();
+        EmailtxtField = new javax.swing.JTextField();
+        PhonetxtField = new javax.swing.JTextField();
         jButton3 = new javax.swing.JButton();
         jPanel4 = new javax.swing.JPanel();
         jLabel8 = new javax.swing.JLabel();
@@ -148,9 +166,9 @@ PreparedStatement pst;
         jLabel6.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel6.setText("Phone Number");
 
-        jTextField4.addActionListener(new java.awt.event.ActionListener() {
+        EmailtxtField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField4ActionPerformed(evt);
+                EmailtxtFieldActionPerformed(evt);
             }
         });
 
@@ -172,13 +190,13 @@ PreparedStatement pst;
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jButton3)
                     .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 211, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(EmailtxtField, javax.swing.GroupLayout.PREFERRED_SIZE, 211, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel4)
-                            .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 211, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(UsernametxtField, javax.swing.GroupLayout.PREFERRED_SIZE, 211, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addComponent(jLabel6)
-                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 211, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(PhonetxtField, javax.swing.GroupLayout.PREFERRED_SIZE, 211, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(133, 133, 133))
         );
         jPanel3Layout.setVerticalGroup(
@@ -187,15 +205,15 @@ PreparedStatement pst;
                 .addGap(60, 60, 60)
                 .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(UsernametxtField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel5)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(EmailtxtField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel6)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(PhonetxtField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jButton3)
                 .addContainerGap(157, Short.MAX_VALUE))
@@ -296,9 +314,9 @@ PreparedStatement pst;
                
     }//GEN-LAST:event_jButton2ActionPerformed
 
-    private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
+    private void EmailtxtFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EmailtxtFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField4ActionPerformed
+    }//GEN-LAST:event_EmailtxtFieldActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
@@ -346,6 +364,9 @@ PreparedStatement pst;
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField EmailtxtField;
+    private javax.swing.JTextField PhonetxtField;
+    private javax.swing.JTextField UsernametxtField;
     private javax.swing.JTextField cityTxtField;
     private javax.swing.JTextField distTxtField;
     private javax.swing.JTextField edTxtField;
@@ -369,9 +390,6 @@ PreparedStatement pst;
     private javax.swing.JPasswordField jPasswordField1;
     private javax.swing.JPasswordField jPasswordField2;
     private javax.swing.JTabbedPane jTabbedPane5;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
     private javax.swing.JTextField stLocTxt;
     // End of variables declaration//GEN-END:variables
 }

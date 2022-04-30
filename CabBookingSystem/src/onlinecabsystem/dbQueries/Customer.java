@@ -76,4 +76,57 @@ public class Customer {
             }
 	}
     }	
+    
+    public void UpdatePassword(String Email,String newpin,String cpin)
+    {
+        
+        try{
+             String sql="select * from customer where Email=?";
+             connection = getConnection();
+            ptmt=connection.prepareStatement(sql);
+            ptmt.setString(1,Email);
+            resultSet=ptmt.executeQuery();
+            
+            if (resultSet.next()){
+                
+                String v1=Email;
+                String v2=newpin;
+                String v3=cpin;
+                
+                if (v3.equals(v2)){
+                    sql="update customer set Pin='"+v3+"' where Email='"+v1+"'";
+                    ptmt=connection.prepareStatement(sql);
+                    ptmt.execute();
+                    
+                    JOptionPane.showMessageDialog(null, "Pin changed successfully!");
+                    
+                    
+                   
+                    
+                }
+                else{
+                    JOptionPane.showMessageDialog(null, "Both Pins don't match!");
+                   
+                }
+             
+                
+            }
+            else{
+                JOptionPane.showMessageDialog(null, "Oops Database issue!");
+            }
+                
+            
+            
+        }catch(Exception e){
+            JOptionPane.showMessageDialog(null,e);
+        }finally{
+            try{
+                resultSet.close();
+                ptmt.close();
+            }catch(Exception e){
+              
+                JOptionPane.showMessageDialog(null, "Oops Database issue!");
+            }
+        }
+    }
 }

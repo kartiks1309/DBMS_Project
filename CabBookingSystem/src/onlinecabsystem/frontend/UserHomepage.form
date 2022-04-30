@@ -317,8 +317,8 @@
                               <Component id="jLabel8" min="-2" max="-2" attributes="0"/>
                               <Component id="jLabel10" min="-2" pref="115" max="-2" attributes="0"/>
                               <Component id="jButton2" alignment="0" max="32767" attributes="0"/>
-                              <Component id="jTextField6" alignment="0" max="32767" attributes="0"/>
-                              <Component id="jTextField7" alignment="0" max="32767" attributes="0"/>
+                              <Component id="jPasswordField1" max="32767" attributes="0"/>
+                              <Component id="jPasswordField2" alignment="0" max="32767" attributes="0"/>
                           </Group>
                           <EmptySpace pref="130" max="32767" attributes="0"/>
                       </Group>
@@ -330,11 +330,11 @@
                           <EmptySpace min="-2" pref="53" max="-2" attributes="0"/>
                           <Component id="jLabel10" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jTextField6" min="-2" max="-2" attributes="0"/>
+                          <Component id="jPasswordField1" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="jLabel8" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jTextField7" min="-2" max="-2" attributes="0"/>
+                          <Component id="jPasswordField2" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
                           <Component id="jButton2" min="-2" max="-2" attributes="0"/>
                           <EmptySpace pref="206" max="32767" attributes="0"/>
@@ -359,10 +359,6 @@
                     <Property name="text" type="java.lang.String" value="New Password"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField6">
-                </Component>
-                <Component class="javax.swing.JTextField" name="jTextField7">
-                </Component>
                 <Component class="javax.swing.JButton" name="jButton2">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
@@ -376,6 +372,10 @@
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton2ActionPerformed"/>
                   </Events>
+                </Component>
+                <Component class="javax.swing.JPasswordField" name="jPasswordField1">
+                </Component>
+                <Component class="javax.swing.JPasswordField" name="jPasswordField2">
                 </Component>
               </SubComponents>
             </Container>

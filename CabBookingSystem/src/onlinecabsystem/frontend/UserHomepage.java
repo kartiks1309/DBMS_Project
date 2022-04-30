@@ -3,16 +3,24 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package onlinecabsystem.frontend;
+import java.sql.*;
+
+import javax.swing.JOptionPane;
+import onlinecabsystem.dbQueries.Customer;
 import onlinecabsystem.dbQueries.BookCab;
 /**
  *
  * @author rishu
  */
+
 public class UserHomepage extends javax.swing.JFrame {
 
     /**
      * Creates new form UserHomepage
      */
+    Connection conn;
+ResultSet rs;
+PreparedStatement pst;
     private String loggedInUserEmailId;
     public UserHomepage(String emailid) {
         initComponents();
@@ -52,9 +60,9 @@ public class UserHomepage extends javax.swing.JFrame {
         jPanel4 = new javax.swing.JPanel();
         jLabel8 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
-        jTextField6 = new javax.swing.JTextField();
-        jTextField7 = new javax.swing.JTextField();
         jButton2 = new javax.swing.JButton();
+        jPasswordField1 = new javax.swing.JPasswordField();
+        jPasswordField2 = new javax.swing.JPasswordField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -220,8 +228,8 @@ public class UserHomepage extends javax.swing.JFrame {
                     .addComponent(jLabel8)
                     .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jTextField6)
-                    .addComponent(jTextField7))
+                    .addComponent(jPasswordField1)
+                    .addComponent(jPasswordField2))
                 .addContainerGap(130, Short.MAX_VALUE))
         );
         jPanel4Layout.setVerticalGroup(
@@ -230,11 +238,11 @@ public class UserHomepage extends javax.swing.JFrame {
                 .addGap(53, 53, 53)
                 .addComponent(jLabel10)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel8)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jPasswordField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(28, 28, 28)
                 .addComponent(jButton2)
                 .addContainerGap(206, Short.MAX_VALUE))
@@ -278,7 +286,14 @@ public class UserHomepage extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
+        
+        
+                    Customer object= new Customer();
+                   object.UpdatePassword(loggedInUserEmailId,jPasswordField1.getText(),jPasswordField2.getText());
+                    jPasswordField1.setText("");
+                    jPasswordField2.setText("");
+                    
+               
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
@@ -351,12 +366,12 @@ public class UserHomepage extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
+    private javax.swing.JPasswordField jPasswordField1;
+    private javax.swing.JPasswordField jPasswordField2;
     private javax.swing.JTabbedPane jTabbedPane5;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jTextField7;
     private javax.swing.JTextField stLocTxt;
     // End of variables declaration//GEN-END:variables
 }

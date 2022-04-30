@@ -12,6 +12,7 @@ It helps the users to book the cab easily and store the data using mysql databas
 <img src="Screenshots_of_project/addCab.jpg">
 <img src="Screenshots_of_project/bookings.jpg">
  </div>
+ 
 ### MySql Database:-
 Tables:
 1) Cablist 

@@ -163,6 +163,7 @@ public class RegisterCustomer extends javax.swing.JFrame {
         jLabel11.setFont(new java.awt.Font("Harlow Solid Italic", 1, 36)); // NOI18N
         jLabel11.setText("Cabby Shacks");
 
+        jButton8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/back.jpeg"))); // NOI18N
         jButton8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton8ActionPerformed(evt);
@@ -307,22 +308,16 @@ public class RegisterCustomer extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField emailTxtField;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
-    private javax.swing.JPanel jPanel5;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField phoneTxtField;
     private javax.swing.JPasswordField pinTxtField;

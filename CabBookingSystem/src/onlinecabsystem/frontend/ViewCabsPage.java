@@ -165,6 +165,7 @@ public class ViewCabsPage extends javax.swing.JFrame {
         jLabel16.setFont(new java.awt.Font("Harlow Solid Italic", 1, 36)); // NOI18N
         jLabel16.setText("Cabby Shacks");
 
+        jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/back.jpeg"))); // NOI18N
         jButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton6ActionPerformed(evt);

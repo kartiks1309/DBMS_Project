@@ -18,5 +18,10 @@ Tables:
 ###### Java Swing
 ###### MySql for database
 
-![User_login](https://user-images.githubusercontent.com/76680199/166163645-b1085347-d8b1-4a5e-a5d2-dcefb3686942.png)
-![Admin_login](https://user-images.githubusercontent.com/76680199/166163658-53898913-3682-4567-b424-c706be82dc6d.png)
+### Screenshots
+
+<div style="display-inline">
+ <img src="Screenshots_of_project/User_login.png">
+ <img src="Screenshots_of_project/Admin_login.png">
+
+</div>

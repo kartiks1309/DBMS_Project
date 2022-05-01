@@ -170,7 +170,10 @@ public class AdminHomepage extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+        
+        setVisible(false);
+        ViewCabsPage vcp = new ViewCabsPage();
+        vcp.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -180,14 +183,17 @@ public class AdminHomepage extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
+        
+        setVisible(false);
+        UpdateCab uc = new UpdateCab();
+        uc.setVisible(true);
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
        
-//        setVisible(false);
-//        UpdatePassword ob2= new UpdatePassword(admin_id);
-//        ob2.setVisible(true);
+        setVisible(false);
+        UpdatePassword ob2= new UpdatePassword(admin_id);
+        ob2.setVisible(true);
         
     }//GEN-LAST:event_jButton4ActionPerformed
 

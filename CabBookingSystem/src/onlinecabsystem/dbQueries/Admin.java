@@ -56,7 +56,7 @@ public class Admin {
     }	
     
     
-    public void UpdatePassword(String id,String pin,String cpin)
+    public void Updatepassword(String id,String pin,String cpin)
     {
          
         

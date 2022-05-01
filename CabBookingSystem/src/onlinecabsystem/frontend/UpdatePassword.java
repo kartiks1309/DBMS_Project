@@ -3,6 +3,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package onlinecabsystem.frontend;
+import javax.swing.JOptionPane;
+import onlinecabsystem.dbQueries.Admin;
+
 
 /**
  *
@@ -13,8 +16,11 @@ public class UpdatePassword extends javax.swing.JFrame {
     /**
      * Creates new form UpdatePassword
      */
-    public UpdatePassword() {
+    
+    String id;
+    public UpdatePassword(String x) {
         initComponents();
+       id=x;
     }
 
     /**
@@ -191,7 +197,11 @@ public class UpdatePassword extends javax.swing.JFrame {
     }//GEN-LAST:event_ConfirmPinTxtField1ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+     
+         Admin up= new Admin();
+        up.Updatepassword(id,NewPinTxtField.getText(),ConfirmPinTxtField1.getText());
+        NewPinTxtField.setText("");
+        ConfirmPinTxtField1.setText("");
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
@@ -230,7 +240,7 @@ public class UpdatePassword extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new UpdatePassword().setVisible(true);
+                new UpdatePassword("").setVisible(true);
             }
         });
     }

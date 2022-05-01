@@ -24,4 +24,4 @@ hs_err_pid*
 /CabBookingSystem/nbproject/private/
 /CabBookingSystem/build/
 /CabBookingSystem/dist/
-CabBookingSystem/src/onlinecabsystem/dbConnection/DbUtil.java
+/CabBookingSystem/src/onlinecabsystem/dbConnection/DbUtil.java

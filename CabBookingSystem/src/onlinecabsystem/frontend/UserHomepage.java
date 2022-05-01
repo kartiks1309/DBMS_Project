@@ -22,7 +22,7 @@ public class UserHomepage extends javax.swing.JFrame {
     Connection conn;
 ResultSet rs;
 PreparedStatement pst;
-    private String loggedInUserEmailId;
+    static private String loggedInUserEmailId="";
     public UserHomepage(String emailid) {
         initComponents();
         loggedInUserEmailId = emailid;
@@ -344,10 +344,12 @@ PreparedStatement pst;
         jPanel8Layout.setVerticalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel8Layout.createSequentialGroup()
-                .addContainerGap(13, Short.MAX_VALUE)
-                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel16)
-                    .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(25, Short.MAX_VALUE)
+                .addComponent(jLabel16)
+                .addContainerGap(24, Short.MAX_VALUE))
+            .addGroup(jPanel8Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -417,7 +419,7 @@ PreparedStatement pst;
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-        AdminHomepage ad= new AdminHomepage("");
+        LoginPage ad= new LoginPage();
         setVisible(false);
         ad.setVisible(true);
     }//GEN-LAST:event_jButton6ActionPerformed
@@ -476,7 +478,7 @@ PreparedStatement pst;
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new UserHomepage("").setVisible(true);
+                new UserHomepage(loggedInUserEmailId).setVisible(true);
             }
         });
     }

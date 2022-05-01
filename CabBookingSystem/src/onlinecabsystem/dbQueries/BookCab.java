@@ -9,6 +9,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.Vector;
 import javax.swing.JOptionPane;
 import onlinecabsystem.dbConnection.DbUtil;
 
@@ -119,6 +120,43 @@ public class BookCab {
 		}
                 }
 	}
-	
+	public Vector<String> findWithBookingId(int bookingId){
+            String sql="select * from bookings where BookingId=?";
+            Vector<String> bookingTransaction= new Vector<String>();
+            try{
+            
+            connection = getConnection();
+            ptmt = connection.prepareStatement(sql);
+                ptmt.setInt(1, bookingId);
+                resultSet = ptmt.executeQuery();
+                if (resultSet.next()){
+                    
+                      bookingTransaction.add (resultSet.getString("CabId"));
+                      bookingTransaction.add(resultSet.getString("StartLoc"));
+                      bookingTransaction.add(resultSet.getString("EndLoc"));
+                      bookingTransaction.add(Integer.toString(resultSet.getInt("Distance")));
+                      bookingTransaction.add(Integer.toString(resultSet.getInt("BillAmount")));
+                      bookingTransaction.add (resultSet.getString("Email"));
+                      
+                      return bookingTransaction;
+                     
+                }
+                else{
+                    JOptionPane.showMessageDialog(null, "Wrong Booking Id");
+                }
+            
+        }catch(Exception e){
+            JOptionPane.showMessageDialog(null, e);
+        } finally{
+                try{
+                    resultSet.close();
+                    ptmt.close();
+                    connection.close();
+                }catch(SQLException e){
+                    e.printStackTrace();
+                }
+            }
+            return bookingTransaction;
+        } 
 	
 }

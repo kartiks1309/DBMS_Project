@@ -39,5 +39,6 @@ Tables:
 <img src="Screenshots_of_project/Admin_login.png" >
 <img src="Screenshots_of_project/AdminHomepage.png" >
 <img src="Screenshots_of_project/AddCab.png" >
+<img src="Screenshots_of_project/SearchCab_after_clicking_search_button.png" >
 <img src="Screenshots_of_project/ViewCabDetails.png" >
  </div>

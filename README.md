@@ -3,15 +3,7 @@
 ![](https://img.shields.io/badge/mysql-%2C-orange)
 
 ### Aim
-It helps the users to book the cab easily and store the data using mysql database as well as link java code and database using jdbc (java database connection).
-
-### Screenshots
-<div style="display-inline">
-<img src="Screenshots_of_project/userHome.jpg" >
-<img src="Screenshots_of_project/AdminHome.jpg">
-<img src="Screenshots_of_project/addCab.jpg">
-<img src="Screenshots_of_project/bookings.jpg">
- </div>
+It helps the users to book the cab easily and store the data using mysql database as well as link java code and database using JDBC (Java Database Connectivity).
  
 ### MySql Database:-
 Tables:
@@ -25,3 +17,6 @@ Tables:
 ###### JDBC
 ###### Java Swing
 ###### MySql for database
+
+![User_login](https://user-images.githubusercontent.com/76680199/166163645-b1085347-d8b1-4a5e-a5d2-dcefb3686942.png)
+![Admin_login](https://user-images.githubusercontent.com/76680199/166163658-53898913-3682-4567-b424-c706be82dc6d.png)

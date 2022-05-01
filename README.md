@@ -18,7 +18,7 @@ Tables:
 ###### Java Swing
 ###### MySql for database
 
-### Screenshots
+### Screenshots (USER)
 <div style="display-inline">
 <img src="Screenshots_of_project/User_login.png" >
 <img src="Screenshots_of_project/User_Book_Cab.png" >
@@ -32,6 +32,9 @@ Tables:
 <img src="Screenshots_of_project/Printer_option.png" >
  </div>
  
+
+
+### Screenshots (ADMIN)
 <div style="display_inline">
 <img src="Screenshots_of_project/Admin_login.png" >
 <img src="Screenshots_of_project/AdminHomepage.png" >

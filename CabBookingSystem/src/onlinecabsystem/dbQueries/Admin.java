@@ -63,7 +63,6 @@ public class Admin {
           try{
               String sql="select* from admins where Id=?";
                connection = getConnection();
-//              conn=getConnection();
             ptmt=connection.prepareStatement(sql);
             
             ptmt.setString(1, id);
@@ -80,27 +79,18 @@ public class Admin {
                     ptmt=connection.prepareStatement(sql);
                     ptmt.execute();
                     
-                    JOptionPane.showMessageDialog(null, "Pin changed successfully!");
-                    
-                    
-//                    NewPintxtField.setText("");
-//                    ConfirmPintxtField.setText("");
+                    JOptionPane.showMessageDialog(null, "Pin changed successfully!");   
                     
                 }
                 else{
                     JOptionPane.showMessageDialog(null, "Both Passwords don't match!");
-//                    NewPintxtField.setText("");
-//                    ConfirmPintxtField.setText("");
                 }
              
                 
             }
             else{
                 JOptionPane.showMessageDialog(null, "Incorrect Credential!");
-            }
-                
-            
-            
+            }        
         }catch(Exception e){
             JOptionPane.showMessageDialog(null,"Oops! Database issue.");
         }finally{
@@ -108,7 +98,7 @@ public class Admin {
                 resultSet.close();
                 ptmt.close();
             }catch(Exception e){
-            
+             e.printStackTrace();
             }
         }
         

@@ -24,6 +24,9 @@ public class OnlineCabSystem {
         try{
             Connection conn;
         conn = DbUtil.getInstance().getConnection();
+        if(conn!=null){
+            System.out.println("connection established");
+        }
         }catch(Exception e){
             System.out.println(e);
         }

@@ -292,7 +292,7 @@ public class ViewCabsPage extends javax.swing.JFrame {
             jTextField4.setText(v.get(2));
             jTextField5.setText(v.get(3));
         }else{
-            System.out.println("Problemo!");
+           JOptionPane.showMessageDialog(null, "Problemo!");
             jTextField2.setText("");
             jTextField3.setText("");
             jTextField4.setText("");

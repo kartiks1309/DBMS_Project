@@ -38,7 +38,7 @@ PreparedStatement pst;
         }
         else
         {
-                        System.out.println("There is some Problem");
+                        JOptionPane.showMessageDialog(null, "Problemo!");
                          UsernametxtField.setText("");
                          EmailtxtField.setText("");
                          PhonetxtField.setText("");

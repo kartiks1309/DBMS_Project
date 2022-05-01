@@ -29,8 +29,7 @@ public class PreviousBookings extends javax.swing.JFrame {
         
     public PreviousBookings(String mailId) {
         initComponents();
-        loggedInmailId = mailId;
-        System.out.println(loggedInmailId);
+        loggedInmailId = mailId;        
     }
     private Connection getConnection() throws SQLException {
 	Connection conn;

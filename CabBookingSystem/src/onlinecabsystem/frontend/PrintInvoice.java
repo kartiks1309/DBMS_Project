@@ -212,7 +212,7 @@ public class PrintInvoice extends javax.swing.JFrame {
         try{
             invoice.print();
         }catch(Exception e){
-            System.out.println(e);
+            e.printStackTrace();
         }
         }else{
             JOptionPane.showMessageDialog(null, "This booking id is not of your email account.");

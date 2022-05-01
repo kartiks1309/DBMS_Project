@@ -20,7 +20,7 @@ public class DbUtil {
 	String connectionUrl = "jdbc:mysql://localhost:3306/cabs_db";
 	String dbUser = "root";
 
-	String dbPwd = "srishtid";
+	String dbPwd = "iiit127_kk";
 
 	
 
@@ -38,8 +38,7 @@ public class DbUtil {
 	public Connection getConnection() throws SQLException {
 		Connection conn = null;
 		conn = DriverManager.getConnection(connectionUrl, dbUser, dbPwd);
-                System.out.println("connection established");
-		return conn;
+             	return conn;
 	}
 
 	public static DbUtil getInstance() {

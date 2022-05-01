@@ -95,7 +95,7 @@ public class BookCab {
 			ptmt.setInt(6, dist);
 			ptmt.setInt(7, (15*dist));
 			ptmt.executeUpdate();
-                        JOptionPane.showMessageDialog(null,"Cab Booked successfully!");
+                        JOptionPane.showMessageDialog(null,"Cab Booked successfully!\n Total charges: "+(15*dist)+"\n Cab Number: "+AvailCabid);
                         
                         //Making availability of Cabid used as 0 as cab booked successfully
                         Cab cabObj=new Cab();

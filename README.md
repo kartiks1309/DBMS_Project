@@ -19,9 +19,22 @@ Tables:
 ###### MySql for database
 
 ### Screenshots
-
 <div style="display-inline">
- <img src="Screenshots_of_project/User_login.png">
- <img src="Screenshots_of_project/Admin_login.png">
-
-</div>
+<img src="Screenshots_of_project/User_login.png" >
+<img src="Screenshots_of_project/User_Book_Cab.png" >
+<img src="Screenshots_of_project/User_Change_Password.png" >
+<img src="Screenshots_of_project/User_View_Profile.png" >
+<img src="Screenshots_of_project/User_Previous_bookings.png" >
+<img src="Screenshots_of_project/final_invoice.png" >
+ </div>
+ 
+<div>
+<img src="Screenshots_of_project/Printer_option.png" >
+ </div>
+ 
+<div style="display_inline">
+<img src="Screenshots_of_project/Admin_login.png" >
+<img src="Screenshots_of_project/AdminHomepage.png" >
+<img src="Screenshots_of_project/AddCab.png" >
+<img src="Screenshots_of_project/ViewCabDetails.png" >
+ </div>

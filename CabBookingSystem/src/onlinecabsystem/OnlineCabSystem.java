@@ -8,6 +8,7 @@ import java.sql.DriverManager;
 import onlinecabsystem.dbQueries.Customer;
 import onlinecabsystem.dbConnection.DbUtil;
 import java.sql.Connection;
+import onlinecabsystem.frontend.LoginPage;
 /**
  *
  * @author Devil
@@ -26,7 +27,8 @@ public class OnlineCabSystem {
         }catch(Exception e){
             System.out.println(e);
         }
-               	
+        LoginPage myApp=new LoginPage();
+        myApp.setVisible(true);        
     }
     
 }
